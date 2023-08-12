@@ -5,7 +5,30 @@
 <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    
+    //Ejercicio 1
+    /*
+    ctx.fillStyle = "blue";
+    ctx.fillRect(20, 20, 100, 100);
+    ctx.fillStyle = "red";
+    ctx.fillRect(90, 90, 100, 100);
+    ctx.fillStyle = "pink";
+    ctx.fillRect(160, 160, 100, 100);*/
+    //fin Ejercicio 1
+
+    //Ejercicio 2
+    ctx.fillStyle = "red";
+    ctx.moveTo(260,250);
+    ctx.lineTo(400,400);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(250,250);
+    ctx.lineTo(400,500);
+    ctx.lineTo(250,400)
+    ctx.strokeStyle="blue";
+    ctx.stroke();
+    ctx.fill();
+   
+ 
 
 </script>
 <style>

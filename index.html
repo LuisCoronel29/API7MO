@@ -8,8 +8,8 @@
     var ctx = canvas.getContext("2d");
     
     //Imagen
-    var imagen = document.getElementById("mi_imagen");
-    ctx.drawImage(imagen,150,400,300,200);
+    // var imagen = document.getElementById("mi_imagen");
+    // ctx.drawImage(imagen,150,20,200,200);
 
     //Ejercicio 1
     /*
@@ -35,40 +35,80 @@
     ctx.fill();
     */
    //Ejercicio 3
-   ctx.beginPath();
-   ctx.arc(300, 75, 50, 0, 2 * Math.PI);
-   ctx.fillStyle = "orange";
-   ctx.strokeStyle="black";
-   ctx.stroke();
-   ctx.fill();
-   ctx.beginPath();
-   ctx.beginPath();
-    ctx.arc(400, 75, 50, 0, 2 * Math.PI);
-    ctx.strokeStyle="red";
-    ctx.stroke();
+//   ctx.beginPath();
+//    ctx.arc(300, 75, 50, 0, 2 * Math.PI);
+//    ctx.fillStyle = "orange";
+//    ctx.strokeStyle="black";
+//    ctx.stroke();
+//    ctx.fill();
+//    ctx.beginPath();
+//    ctx.beginPath();
+//     ctx.arc(400, 75, 50, 0, 2 * Math.PI);
+//     ctx.strokeStyle="red";
+//     ctx.stroke();
 
     //Ejercicio 4
-    ctx.font="50 px,Arial";
-    ctx.fillText("palabra rellena", 300,200);
-    ctx.strokeStyle="#5AF20D";
-    ctx.strokeText("palabra con contorno",350,250);
+    // ctx.font="50 px,Arial";
+    // ctx.fillText("palabra rellena", 300,200);
+    // ctx.strokeStyle="#5AF20D";
+    // ctx.strokeText("palabra con contorno",350,250);
 
     //Ejercicio 5
-    var grd = ctx.createLinearGradient(120,20,375,0);
-    grd.addColorStop(0,"#7BE439");
-    grd.addColorStop(0.3,"#FD2424");
-    grd.addColorStop(1,"#FF00C0");
-    ctx.fillStyle=grd;
-    ctx.fillRect(120, 20, 100, 100);
+    // var grd = ctx.createLinearGradient(120,20,375,0);
+    // grd.addColorStop(0,"#7BE439");
+    // grd.addColorStop(0.3,"#FD2424");
+    // grd.addColorStop(1,"#FF00C0");
+    // ctx.fillStyle=grd;
+    // ctx.fillRect(120, 20, 100, 100);
 
     //Ejercicio 6
     
-    var grd=ctx.createRadialGradient(100,75,5,90,150,100);
-    grd.addColorStop(0,"red");
-    grd.addColorStop(1,"pink");
-    ctx.fillStyle=grd;
-    ctx.fillRect(20, 20, 100, 100);
+    // var grd=ctx.createRadialGradient(100,75,5,90,150,100);
+    // grd.addColorStop(0,"red");
+    // grd.addColorStop(1,"pink");
+    // ctx.fillStyle=grd;
+    // ctx.fillRect(20, 20, 100, 100);
+    var figura=false;
+    var press=false;
+    var move=false;
+    var color=getRandomColor();
+    addEventListener("mousemove", (event) => {
+       if(press)
+       {
+        //ctx.fillStyle="black";
+        ctx.beginPath();
+        ctx.arc(event.layerX, event.layerY, 5, 0, 2 * Math.PI);
+        ctx.fill();
+       }
+    });
+    addEventListener("mousedown", (event) => {
+        if(figura){
+         ctx.beginPath();
+         ctx.arc(event.layerX, event.layerY, 50, 0, 2 * Math.PI);
+         ctx.fill();
+        }else{
+            ctx.fillRect(event.layerX,event.layerY,100,100);
+        }
+            press=true;
+    });
+    addEventListener("mouseup", (event) => {
+       press=false;
+    });
+    
+    
+    addEventListener("mouseout", (event) => {
+        figura=!figura;
+        ctx.fillStyle = getRandomColor(); 
+    });
 
+    function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
 
 

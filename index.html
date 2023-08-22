@@ -68,38 +68,38 @@
     // grd.addColorStop(1,"pink");
     // ctx.fillStyle=grd;
     // ctx.fillRect(20, 20, 100, 100);
-    var figura=false;
-    var press=false;
-    var move=false;
-    var color=getRandomColor();
-    addEventListener("mousemove", (event) => {
-       if(press)
-       {
-        //ctx.fillStyle="black";
-        ctx.beginPath();
-        ctx.arc(event.layerX, event.layerY, 5, 0, 2 * Math.PI);
-        ctx.fill();
-       }
-    });
-    addEventListener("mousedown", (event) => {
-        if(figura){
-         ctx.beginPath();
-         ctx.arc(event.layerX, event.layerY, 50, 0, 2 * Math.PI);
-         ctx.fill();
-        }else{
-            ctx.fillRect(event.layerX,event.layerY,100,100);
-        }
-            press=true;
-    });
-    addEventListener("mouseup", (event) => {
-       press=false;
-    });
+//     var figura=false;
+//     var press=false;
+//     var move=false;
+//     var color=getRandomColor();
+//     addEventListener("mousemove", (event) => {
+//        if(press)
+//        {
+//         //ctx.fillStyle="black";
+//         ctx.beginPath();
+//         ctx.arc(event.layerX, event.layerY, 5, 0, 2 * Math.PI);
+//         ctx.fill();
+//        }
+//     });
+//     addEventListener("mousedown", (event) => {
+//         if(figura){
+//          ctx.beginPath();
+//          ctx.arc(event.layerX, event.layerY, 50, 0, 2 * Math.PI);
+//          ctx.fill();
+//         }else{
+//             ctx.fillRect(event.layerX,event.layerY,100,100);
+//         }
+//             press=true;
+//     });
+//     addEventListener("mouseup", (event) => {
+//        press=false;
+//     });
     
     
-    addEventListener("mouseout", (event) => {
-        figura=!figura;
-        ctx.fillStyle = getRandomColor(); 
-    });
+//     addEventListener("mouseout", (event) => {
+//         figura=!figura;
+//         ctx.fillStyle = getRandomColor(); 
+//     });
 
     function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
@@ -109,7 +109,33 @@
     }
     return color;
 }
-
+ var x=255,y=255;
+ document.addEventListener("keydown", (event) => {
+    console.log(event);
+    if(event.keyCode==65)
+    {
+        x-=10;
+    }
+    if(event.keyCode==68)
+    {
+        x+=10;
+    }
+    if(event.keyCode==87)
+    {
+        y-=10;
+    }
+    if(event.keyCode==83)
+    {
+        y+=10;
+    }
+    update();
+ });
+ function update(){
+    ctx.fillStyle="white";
+    ctx.fillRect(0,0,500,500);
+    ctx.fillStyle=getRandomColor();
+    ctx.fillRect(x,y,100,100);
+ }
 
 
 

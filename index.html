@@ -6,6 +6,19 @@
 <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
+    window.requestAnimationFrame = (function () {
+    return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        function (callback) {
+            window.setTimeout(callback, 17);
+        };
+    }());
+
+    function inicio(){
+        update();
+
+    }
     
     //Imagen
     // var imagen = document.getElementById("mi_imagen");

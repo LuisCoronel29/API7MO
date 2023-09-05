@@ -2,20 +2,20 @@
 <html>
 <head>
     <canvas id="myCanvas" width="1200" height="700" style="border:solid blue"></canvas>
-    <!-- <button id="BotonCir" >Círculo</button>
+    <button id="BotonCir" >Círculo</button>
     <button id="BotonRect"> Rectángulo</button>
     <button id="BotonTrian"> Triangulo</button>
     <button id="BotonTrianV"> Triangulo V</button>
     <button id="BotonNegro" style="background-color: #EFEC1D;" >Negro</button>
-    <button id="BotonAzulM"style="background-color: #EFEC38;">AzulM</button>
+    <button id="BotonAzulM"style="background-color: blue;">AzulM</button>
     <button id="BotonAzulR"style="background-color: #118A13;">AzulR</button>
-    <button id="BotonAzulC"style="background-color: #46D0CA;">AzulC</button>
-    <button id="BotonBlanco"style="background-color: white;">Blanco</button>
+    <button id="BotonAzulC"style="background-color: #20EC00;">AzulC</button>
+    <button id="BotonBlanco"style="background-color: #43733C;">Blanco</button>
     <button id="BotonCafeO"style="background-color: #C08034;">CafeO</button>
-    <button id="BotonCafeC"style="background-color: #0D510E;">CafeC</button> -->
+    <button id="BotonCafeC"style="background-color: #0D510E;">CafeC</button>
 
 
-    <!-- <script src="avatar.js"></script>  -->
+    <script src="avatar.js"></script>
     <!-- <script src="ejercicio1.js"></script>-->
     <script src="figuras.js"></script>
 
@@ -28,6 +28,11 @@
     var x=255,y=255,dir=0,speed=1;
     var score=0;
     let pausa=false;
+    var image=new Image();
+    var sonido=new Audio();
+    // sonido.src="nombredelaudio.mp3";
+    // image.src="imagencuadro.jpg";
+
 
    
     const player= new Rectangulo(100,100,50,50);
@@ -93,15 +98,7 @@
             }
             return color;
         }
-// document.getElementById("BotonCir").addEventListener("click", function() {
-  
-//   clearCanvas();
-// });
 
-// document.getElementById("rectButton").addEventListener("click", function() {
-//   currentShape = "rectangulo";
-//   clearCanvas();
-// });
 function pausar() {
     
   pausa = !pausa;
@@ -213,6 +210,7 @@ function update() {
     //player
     player.color="blue";
     player.paint(ctx);
+
     //cuadro para interactuar
     comida.color="black";
     comida.paint(ctx);
@@ -264,9 +262,75 @@ function update() {
   );
 }
 
+function pintar(){
+  ctx.fillStyle="blue";
+    ctx.fillRect(0,0,canH,canW);
+    ctx.textFill
+  let piso=[];
+  let x=0;
+  for (var i = 0; i < 24; i++) {
+    piso.push(new Rectangulo(x,650,50,50))
+    if(i%2===0)
+    {
+      piso[i].color="#5A2C04";
+    }else{
+      piso[i].color="#C0722D";
+    }
+    x+=50;
+  }
+  x=0;
+  for (var i = 0; i < 24; i++) {
+    piso.push(new Rectangulo(x,600,50,50))
+    if(i%2===0)
+    {
+      piso[i+24].color="#C0722D";
+    }else{
+      piso[i+24].color="#5A2C04";
+    }
+    x+=50;
+  }
+  x=0
+  for (var i = 0; i < 24; i++) {
+    piso.push(new Rectangulo(x,550,50,50))
+    if(i%2===0)
+    {
+      piso[i+48].color="#5A2C04";
+    }else{
+      piso[i+48].color="#C0722D";
+    }
+    x+=50;
+  }
+  //pasto
+  piso.push(new Rectangulo(0,530,1200,20))
+  piso[72].color="#217E12";
+  piso.push(new Rectangulo(0,510,1200,20))
+  piso[73].color="#3AC124";
+  piso.push(new Rectangulo(0,490,1200,20))
+  piso[74].color="#20D103";
+  //troncos
+  piso.push(new Rectangulo(1050,400,20,90))
+  piso[75].color="#5A2C04";
+  piso.push(new Rectangulo(500,200,20,290))
+  piso[76].color="#5A2C04";
 
-paint();
-window.requestAnimationFrame(update);
+  for (var i = 0; i < piso.length; i++) {
+    piso[i].paint(ctx);
+  }
+
+    ctx.strokeStyle="yellow";
+    ctx.beginPath();
+    ctx.arc(70,420,50, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(200,420,50, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(350,420,50, 0, 2 * Math.PI);
+    ctx.stroke();
+}
+pintar();
+// paint();
+// window.requestAnimationFrame(update);
 
 </script>
 <style>

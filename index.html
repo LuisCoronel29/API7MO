@@ -30,7 +30,8 @@
     let pausa=false;
     var image=new Image();
     var sonido=new Audio();
-    // sonido.src="nombredelaudio.mp3";
+    sonido.src="pacman.mp3";
+    image.src="pacman.png";
     // image.src="imagencuadro.jpg";
 
 
@@ -170,6 +171,7 @@ function update() {
     comida.x = getRandomInt(canH);
     comida.y = getRandomInt(canW);
     score++;
+    sonido.play();
   }
   if (seTocan
   (player,pared)||seTocan(player,pared2)||seTocan(player,pared3)) {
@@ -208,8 +210,9 @@ function update() {
     ctx.fillRect(0,0,canH,canW);
     ctx.textFill
     //player
-    player.color="blue";
-    player.paint(ctx);
+    // player.color="blue";
+    // player.paint(ctx);
+    ctx.drawImage(image,player.x,player.y,50,50);
 
     //cuadro para interactuar
     comida.color="black";
@@ -236,8 +239,8 @@ function update() {
     ctx.fillRect(0,0,canH,canW);
 
 
-    player.paint(ctx);
-
+    // player.paint(ctx);
+    ctx.drawImage(image,player.x,player.y,50,50);
 
     comida.paint(ctx);
 
@@ -262,75 +265,75 @@ function update() {
   );
 }
 
-function pintar(){
-  ctx.fillStyle="blue";
-    ctx.fillRect(0,0,canH,canW);
-    ctx.textFill
-  let piso=[];
-  let x=0;
-  for (var i = 0; i < 24; i++) {
-    piso.push(new Rectangulo(x,650,50,50))
-    if(i%2===0)
-    {
-      piso[i].color="#5A2C04";
-    }else{
-      piso[i].color="#C0722D";
-    }
-    x+=50;
-  }
-  x=0;
-  for (var i = 0; i < 24; i++) {
-    piso.push(new Rectangulo(x,600,50,50))
-    if(i%2===0)
-    {
-      piso[i+24].color="#C0722D";
-    }else{
-      piso[i+24].color="#5A2C04";
-    }
-    x+=50;
-  }
-  x=0
-  for (var i = 0; i < 24; i++) {
-    piso.push(new Rectangulo(x,550,50,50))
-    if(i%2===0)
-    {
-      piso[i+48].color="#5A2C04";
-    }else{
-      piso[i+48].color="#C0722D";
-    }
-    x+=50;
-  }
-  //pasto
-  piso.push(new Rectangulo(0,530,1200,20))
-  piso[72].color="#217E12";
-  piso.push(new Rectangulo(0,510,1200,20))
-  piso[73].color="#3AC124";
-  piso.push(new Rectangulo(0,490,1200,20))
-  piso[74].color="#20D103";
-  //troncos
-  piso.push(new Rectangulo(1050,400,20,90))
-  piso[75].color="#5A2C04";
-  piso.push(new Rectangulo(500,200,20,290))
-  piso[76].color="#5A2C04";
+// function pintar(){
+//   ctx.fillStyle="blue";
+//     ctx.fillRect(0,0,canH,canW);
+//     ctx.textFill
+//   let piso=[];
+//   let x=0;
+//   for (var i = 0; i < 24; i++) {
+//     piso.push(new Rectangulo(x,650,50,50))
+//     if(i%2===0)
+//     {
+//       piso[i].color="#5A2C04";
+//     }else{
+//       piso[i].color="#C0722D";
+//     }
+//     x+=50;
+//   }
+//   x=0;
+//   for (var i = 0; i < 24; i++) {
+//     piso.push(new Rectangulo(x,600,50,50))
+//     if(i%2===0)
+//     {
+//       piso[i+24].color="#C0722D";
+//     }else{
+//       piso[i+24].color="#5A2C04";
+//     }
+//     x+=50;
+//   }
+//   x=0
+//   for (var i = 0; i < 24; i++) {
+//     piso.push(new Rectangulo(x,550,50,50))
+//     if(i%2===0)
+//     {
+//       piso[i+48].color="#5A2C04";
+//     }else{
+//       piso[i+48].color="#C0722D";
+//     }
+//     x+=50;
+//   }
+//   //pasto
+//   piso.push(new Rectangulo(0,530,1200,20))
+//   piso[72].color="#217E12";
+//   piso.push(new Rectangulo(0,510,1200,20))
+//   piso[73].color="#3AC124";
+//   piso.push(new Rectangulo(0,490,1200,20))
+//   piso[74].color="#20D103";
+//   //troncos
+//   piso.push(new Rectangulo(1050,400,20,90))
+//   piso[75].color="#5A2C04";
+//   piso.push(new Rectangulo(500,200,20,290))
+//   piso[76].color="#5A2C04";
 
-  for (var i = 0; i < piso.length; i++) {
-    piso[i].paint(ctx);
-  }
+//   for (var i = 0; i < piso.length; i++) {
+//     piso[i].paint(ctx);
+//   }
 
-    ctx.strokeStyle="yellow";
-    ctx.beginPath();
-    ctx.arc(70,420,50, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.arc(200,420,50, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.arc(350,420,50, 0, 2 * Math.PI);
-    ctx.stroke();
-}
-pintar();
-// paint();
-// window.requestAnimationFrame(update);
+//     ctx.strokeStyle="yellow";
+//     ctx.beginPath();
+//     ctx.arc(70,420,50, 0, 2 * Math.PI);
+//     ctx.stroke();
+//     ctx.beginPath();
+//     ctx.arc(200,420,50, 0, 2 * Math.PI);
+//     ctx.stroke();
+//     ctx.beginPath();
+//     ctx.arc(350,420,50, 0, 2 * Math.PI);
+//     ctx.stroke();
+// }
+// pintar();
+paint();
+window.requestAnimationFrame(update);
 
 </script>
 <style>

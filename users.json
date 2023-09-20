@@ -1,0 +1,203 @@
+[
+    {
+      "name": "Juan Pérez",
+      "email": "juan@example.com",
+      "password": "contrasena123"
+    },
+    {
+      "name": "María García",
+      "email": "maria@example.com",
+      "password": "maria456"
+    },
+    {
+      "name": "Pedro Rodríguez",
+      "email": "pedro@example.com",
+      "password": "pedro789"
+    },
+    {
+      "name": "Luisa Fernández",
+      "email": "luisa@example.com",
+      "password": "luisa2022"
+    },
+    {
+      "name": "Andrés González",
+      "email": "andres@example.com",
+      "password": "andres1234"
+    },
+    {
+      "name": "Ana Martínez",
+      "email": "ana@example.com",
+      "password": "ana5678"
+    },
+    {
+      "name": "Carlos Sánchez",
+      "email": "carlos@example.com",
+      "password": "carlos999"
+    },
+    {
+      "name": "Sofía López",
+      "email": "sofia@example.com",
+      "password": "sofia777"
+    },
+    {
+      "name": "Diego Ramírez",
+      "email": "diego@example.com",
+      "password": "diego555"
+    },
+    {
+      "name": "Laura Torres",
+      "email": "laura@example.com",
+      "password": "laura111"
+    },
+    {
+      "name": "Manuel Vargas",
+      "email": "manuel@example.com",
+      "password": "manuel222"
+    },
+    {
+      "name": "Isabella Pérez",
+      "email": "isabella@example.com",
+      "password": "isabella333"
+    },
+    {
+      "name": "Javier Morales",
+      "email": "javier@example.com",
+      "password": "javier444"
+    },
+    {
+      "name": "Valentina Castro",
+      "email": "valentina@example.com",
+      "password": "valentina777"
+    },
+    {
+      "name": "Miguel Ruiz",
+      "email": "miguel@example.com",
+      "password": "miguel123"
+    },
+    {
+      "name": "Camila González",
+      "email": "camila@example.com",
+      "password": "camila456"
+    },
+    {
+      "name": "Matías Silva",
+      "email": "matias@example.com",
+      "password": "matias789"
+    },
+    {
+      "name": "Lucía Torres",
+      "email": "lucia@example.com",
+      "password": "lucia2021"
+    },
+    {
+      "name": "Felipe Fernández",
+      "email": "felipe@example.com",
+      "password": "felipe555"
+    },
+    {
+      "name": "Isabel López",
+      "email": "isabel@example.com",
+      "password": "isabel999"
+    },
+    {
+      "name": "Sebastián Pérez",
+      "email": "sebastian@example.com",
+      "password": "sebastian777"
+    },
+    {
+      "name": "Valeria González",
+      "email": "valeria@example.com",
+      "password": "valeria111"
+    },
+    {
+      "name": "José Rodríguez",
+      "email": "jose@example.com",
+      "password": "jose222"
+    },
+    {
+      "name": "Amanda Martínez",
+      "email": "amanda@example.com",
+      "password": "amanda333"
+    },
+    {
+      "name": "Carlos Pérez",
+      "email": "carlos@example.com",
+      "password": "carlos444"
+    },
+    {
+      "name": "Renata Sánchez",
+      "email": "renata@example.com",
+      "password": "renata555"
+    },
+    {
+      "name": "Mateo Torres",
+      "email": "mateo@example.com",
+      "password": "mateo111"
+    },
+    {
+      "name": "Fernanda López",
+      "email": "fernanda@example.com",
+      "password": "fernanda222"
+    },
+    {
+      "name": "Joaquín González",
+      "email": "joaquin@example.com",
+      "password": "joaquin333"
+    },
+    {
+      "name": "Sara Martínez",
+      "email": "sara@example.com",
+      "password": "sara444"
+    },
+    {
+      "name": "Nicolás García",
+      "email": "nicolas@example.com",
+      "password": "nicolas555"
+    },
+    {
+      "name": "Valentina Pérez",
+      "email": "valentina@example.com",
+      "password": "valentina666"
+    },
+    {
+      "name": "Martín Fernández",
+      "email": "martin@example.com",
+      "password": "martin777"
+    },
+    {
+      "name": "Catalina Sánchez",
+      "email": "catalina@example.com",
+      "password": "catalina888"
+    },
+    {
+      "name": "Emilio González",
+      "email": "emilio@example.com",
+      "password": "emilio999"
+    },
+    {
+      "name": "Isabella Ramírez",
+      "email": "isabella2@example.com",
+      "password": "isabella2"
+    },
+    {
+      "name": "Antonio Rodríguez",
+      "email": "antonio@example.com",
+      "password": "antonio123"
+    },
+    {
+      "name": "Daniela Pérez",
+      "email": "daniela@example.com",
+      "password": "daniela456"
+    },
+    {
+      "name": "Hugo Silva",
+      "email": "hugo@example.com",
+      "password": "hugo789"
+    },
+    {
+      "name": "Olivia Torres",
+      "email": "olivia@example.com",
+      "password": "olivia2023"
+    }
+  ]
+  
